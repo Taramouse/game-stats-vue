@@ -1,21 +1,14 @@
 <template>
   <v-container>
-    <v-layout>
-      <h1>{{title}}</h1>
-    </v-layout>
-    <v-layout>
-      <h3>{{msg}}</h3>
-    </v-layout>
-    <v-card flat class="pa-3" v-for="project in projects" :key="project.id">
-      <v-layout row wrap>
-        <v-flex xs12 md4 class="info">
-          <div class="title">{{project.title}}</div>
+    <v-card hover class="ma-3 pa-2" v-for="profile in profiles" :key="profile.id">
+      <v-layout row wrap class="info">
+        <v-flex xs12 class="pa-3">
+          <div class="display-3">{{profile.title}}</div>
         </v-flex>
-        <v-flex xs12 md8>
-          <div>{{project.desc}}</div>
+        <v-flex xs12 class="pa-3">
+          <div class="display-2">{{profile.desc}}</div>
         </v-flex>
       </v-layout>
-      <v-divider></v-divider>
     </v-card>
   </v-container>
 
@@ -25,14 +18,8 @@
 export default {
   name: 'home',
   computed: {
-    title () {
-      return this.$store.getters.title
-    },
-    msg () {
-      return this.$store.getters.msg
-    },
-    projects () {
-      return this.$store.getters.projects
+    profiles () {
+      return this.$store.getters.profiles
     }
   }
 }
