@@ -5,44 +5,71 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    title: 'Projects',
-    msg: 'This is the current vuex state.',
-    projects: [
+    profiles: [
       {
         id: '1',
-        title: 'First Project',
-        desc: 'The first project.',
-        color: 'red'
+        title: 'First Profile',
+        desc: 'The first Profile.',
+        color: 'red',
+        columns: [
+          { value: 'first', title: 'First' },
+          { value: 'second', title: 'Second' },
+          { value: 'third', title: 'Third' },
+          { value: 'fourth', title: 'Fourth' },
+          { value: 'fith', title: 'Fith' },
+          { value: 'sixth', title: 'Sixth' }
+        ]
       },
       {
         id: '2',
-        title: 'Second Project',
-        desc: 'The second project.',
-        color: 'green'
+        title: 'Second Profile',
+        desc: 'The second Profile.',
+        color: 'green',
+        columns: [
+          { value: 'first', title: 'First' },
+          { value: 'second', title: 'Second' },
+          { value: 'third', title: 'Third' },
+          { value: 'fourth', title: 'Fourth' },
+          { value: 'fith', title: 'Fith' },
+          { value: 'sixth', title: 'Sixth' }
+        ]
       },
       {
         id: '3',
-        title: 'Third Project',
-        desc: 'The third project, it has a longer description than the other projects',
-        color: 'blue'
+        title: 'Third Profile',
+        desc: 'The third profile, it has a longer description than the other profiles',
+        color: 'blue',
+        columns: [
+          { value: 'first', title: 'First' },
+          { value: 'second', title: 'Second' },
+          { value: 'third', title: 'Third' },
+          { value: 'fourth', title: 'Fourth' },
+          { value: 'fith', title: 'Fith' },
+          { value: 'sixth', title: 'Sixth' }
+        ]
       },
       {
         id: '4',
-        title: 'Fourth Project',
-        desc: 'The fourth project.',
-        color: 'yellow'
+        title: 'Fourth Profile',
+        desc: 'The fourth Profile.',
+        color: 'yellow',
+        columns: [
+          { value: 'first', title: 'First' },
+          { value: 'second', title: 'Second' },
+          { value: 'third', title: 'Third' },
+          { value: 'fourth', title: 'Fourth' },
+          { value: 'fith', title: 'Fith' },
+          { value: 'sixth', title: 'Sixth' }
+        ]
       }
+    ],
+    item: [
+
     ]
   },
   getters: {
-    title (state) {
-      return state.title
-    },
-    msg (state) {
-      return state.msg
-    },
-    projects (state) {
-      return state.projects
+    profiles (state) {
+      return state.profiles
     }
   },
   mutations: {

@@ -1,13 +1,16 @@
 <template>
   <v-app>
     <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
+      <v-toolbar-title class="headline">
         <span>Game Stats</span>
-        <span class="font-weight-light"> Save your game</span>
+        <span class="font-weight-light"> - Save your game statistics</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn flat href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank">
-        <span class="mr-2">Latest Release</span>
+      <v-btn flat to="/">
+        <span class="mr-2">Profiles</span>
+      </v-btn>
+      <v-btn flat to="/about">
+        <span class="mr-2">Stats</span>
       </v-btn>
     </v-toolbar>
 
