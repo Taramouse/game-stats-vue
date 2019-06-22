@@ -8,10 +8,10 @@
     </v-layout>
     <v-card flat class="pa-3" v-for="project in projects" :key="project.id">
       <v-layout row wrap>
-        <v-flex xs4 md4 class="info">
+        <v-flex xs12 md4 class="info">
           <div class="title">{{project.title}}</div>
         </v-flex>
-        <v-flex xs8 md6>
+        <v-flex xs12 md8>
           <div>{{project.desc}}</div>
         </v-flex>
       </v-layout>
