@@ -8,12 +8,12 @@
         <v-flex xs12 class="pa-3">
           <div class="display-2">{{profile.desc}}</div>
         </v-flex>
-        <v-flex class="pa-3" v-for="column in profile.columns" :key="column.value">
+        <v-flex class="pa-3 text-xs-center" v-for="column in profile.columns" :key="column.value">
           <div class="body-1">{{column.title}}</div>
+          <v-flex class="pa-3" v-for="item in profile.items" :key="item.id">
+            <div class="body-1">{{item[column.value]}}</div>
+          </v-flex>
         </v-flex>
-        <!-- <v-flex class="pa-3" v-for="item in profile.items" :key="item.id">
-          <div class="body-1">{{item[column.value]}}</div>
-        </v-flex> -->
       </v-layout>
     </v-card>
   </v-container>
