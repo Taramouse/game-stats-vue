@@ -12,7 +12,7 @@ export default class Profile extends Model {
       id: this.attr(null),
       user_id: this.attr(null),
       title: this.attr(''),
-      body: this.attr(''),
+      description: this.attr(''),
       published: this.attr(false),
       author: this.belongsTo(User, 'user_id')
     }
